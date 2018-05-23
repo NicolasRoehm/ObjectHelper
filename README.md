@@ -1,19 +1,19 @@
 # Object Helper
-> JavaScript helper for objects management.
+> JavaScript helper for object management.
 
-<a href="https://nodei.co/npm/object-helper-js/">
-  <img src="https://nodei.co/npm/object-helper-js.svg?downloads=true&downloadRank=true&stars=true">
-</a>
-
-<a href="https://runkit.com/bakudan/object-helper-js/">Demo with RunKit</a>
+<a href="https://runkit.com/bakudan/object-helper-js/" target="_blank">Demo with RunKit</a>
 
 ## Installation
 ```bash
 $ npm install object-helper-js --save
 ```
 
+<a href="https://nodei.co/npm/object-helper-js/" target="_blank">
+  <img src="https://nodei.co/npm/object-helper-js.svg?downloads=true&downloadRank=true&stars=true">
+</a>
+
 ## Import
-### Javascript
+### JavaScript
 ```javascript
 let ObjectHelper = require('object-helper-js').ObjectHelper;
 ```
