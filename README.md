@@ -5,6 +5,8 @@
   <img src="https://nodei.co/npm/object-helper-js.svg?downloads=true&downloadRank=true&stars=true">
 </a>
 
+<a href="https://runkit.com/bakudan/object-helper-js/">Demo with RunKit</a>
+
 ## Installation
 ```bash
 $ npm install object-helper-js --save
@@ -83,7 +85,7 @@ var tree = [{
 let nodes = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
 ```
 
-## Tests
+## Test
 ```sh
 npm run test
 ```
