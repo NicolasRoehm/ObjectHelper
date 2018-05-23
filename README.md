@@ -3,7 +3,7 @@ A Javascript helper for objects management.
 
 ## Installation
 ```sh
-npm install object-helper --save
+npm install object-helper-js --save
 ```
 
 ## Import
