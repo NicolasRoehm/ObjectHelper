@@ -13,12 +13,12 @@ $ npm install object-helper-js --save
 ## Import
 ### Javascript
 ```javascript
-let ObjectHelper = require('object-helper').ObjectHelper;
+let ObjectHelper = require('object-helper-js').ObjectHelper;
 ```
 
 ### TypeScript
 ```typescript
-import { ObjectHelper } from 'object-helper';
+import { ObjectHelper } from 'object-helper-js';
 ```
 
 ## Usage

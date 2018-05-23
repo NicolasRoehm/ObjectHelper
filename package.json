@@ -1,6 +1,6 @@
 {
   "name": "object-helper-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Manage you objects easily",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
