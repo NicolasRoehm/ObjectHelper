@@ -1,5 +1,5 @@
 {
-  "name": "object-helper",
+  "name": "object-helper-js",
   "version": "1.0.1",
   "description": "Manage you objects easily",
   "main": "dist/index.js",
