@@ -25,13 +25,20 @@ import { ObjectHelper } from 'object-helper-js';
 
 ### MergeObjects
 ```javascript
-let defaultConfig = {
+var defaultConfig = {
   flipped: false,
-  isFixedToCamera: false
+  isFixedToCamera: false,
+  healthBar: {
+    x: 0,
+    y: 0
+  }
 };
 
-let customConfig = {
-  isFixedToCamera: true
+var customConfig = {
+  isFixedToCamera: true,
+  healthBar: {
+    y: 10
+  }
 };
 
 let config = ObjectHelper.mergeObjects(defaultConfig, customConfig);
@@ -76,7 +83,7 @@ var tree = [{
 let nodes = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
 ```
 
-### Test
+## Tests
 ```sh
 npm run test
 ```
