@@ -1,4 +1,4 @@
-# object-helper
+# Object Helper
 A Javascript helper for objects management.
 
 ## Installation
@@ -18,24 +18,23 @@ import { ObjectHelper } from 'object-helper';
 ```
 
 ## Usage
-### TypeScript
-```typescript
+```javascript
 // mergeObjects
 
-let defaultConfig : any = {
+let defaultConfig = {
   flipped: false,
   isFixedToCamera: false
 };
 
-let customConfig : any = {
+let customConfig = {
   isFixedToCamera: true
 };
 
-let config : any = ObjectHelper.mergeObjects(defaultConfig, customConfig);
+let config = ObjectHelper.mergeObjects(defaultConfig, customConfig);
 
 // getObjByKey
 
-let data : any = {
+let data = {
   CURSOR_1_UP    : { id: 'up',    key: '1' },
   CURSOR_1_DOWN  : { id: 'down',  key: '2' },
   CURSOR_1_LEFT  : { id: 'left',  key: '3' },
@@ -43,11 +42,11 @@ let data : any = {
   TECH_2_BLOCK   : { id: 'block', key: 'b' },
 };
 
-let objects : any = ObjectHelper.filterObjectsByKey(data, 'CURSOR', ['UP', 'LEFT']);
+let objects = ObjectHelper.filterObjectsByKey(data, 'CURSOR', ['UP', 'LEFT']);
 
 // searchTree
 
-var tree : any = [{
+var tree = [{
   title: 'topNode',
   children: [{
     title: 'node1',
@@ -68,7 +67,7 @@ var tree : any = [{
   }]
 }];
 
-let nodes : any = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
+let nodes = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
 ```
 
 ### Test

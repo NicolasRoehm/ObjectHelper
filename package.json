@@ -1,6 +1,6 @@
 {
   "name": "object-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage you objects easily",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Caliatys/object-helper.git"
   },
-  "author": "Nicolas Roehm <nicolas.roehm@gmail.com>",
+  "author": "Bakudan <nicolas.roehm@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Caliatys/object-helper/issues"
