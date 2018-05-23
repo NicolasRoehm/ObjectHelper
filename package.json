@@ -1,6 +1,6 @@
 {
   "name": "object-helper-js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Manage you objects easily",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Caliatys/object-helper.git"
+    "url": "git+https://github.com/Caliatys/ObjectHelper.git"
   },
   "author": "Bakudan <nicolas.roehm@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Caliatys/object-helper/issues"
+    "url": "https://github.com/Caliatys/ObjectHelper/issues"
   },
-  "homepage": "https://github.com/Caliatys/object-helper#readme",
+  "homepage": "https://github.com/Caliatys/ObjectHelper#readme",
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
