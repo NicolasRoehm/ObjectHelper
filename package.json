@@ -1,0 +1,27 @@
+{
+  "name": "object-helper",
+  "version": "1.0.0",
+  "description": "Manage you objects easily",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caliatys/object-helper.git"
+  },
+  "author": "Nicolas Roehm <nicolas.roehm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Caliatys/object-helper/issues"
+  },
+  "homepage": "https://github.com/Caliatys/object-helper#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^11.8.0",
+    "typescript": "^2.8.3"
+  }
+}
