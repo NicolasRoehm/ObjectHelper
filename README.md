@@ -1,9 +1,13 @@
 # Object Helper
-A Javascript helper for objects management.
+> JavaScript helper for objects management.
+
+<a href="https://nodei.co/npm/object-helper-js/">
+  <img src="https://nodei.co/npm/object-helper-js.svg?downloads=true&downloadRank=true&stars=true">
+</a>
 
 ## Installation
-```sh
-npm install object-helper-js --save
+```bash
+$ npm install object-helper-js --save
 ```
 
 ## Import
@@ -18,9 +22,9 @@ import { ObjectHelper } from 'object-helper';
 ```
 
 ## Usage
-```javascript
-// mergeObjects
 
+### MergeObjects
+```javascript
 let defaultConfig = {
   flipped: false,
   isFixedToCamera: false
@@ -31,9 +35,10 @@ let customConfig = {
 };
 
 let config = ObjectHelper.mergeObjects(defaultConfig, customConfig);
+```
 
-// getObjByKey
-
+### FilterObjectsByKey
+```javascript
 let data = {
   CURSOR_1_UP    : { id: 'up',    key: '1' },
   CURSOR_1_DOWN  : { id: 'down',  key: '2' },
@@ -43,9 +48,10 @@ let data = {
 };
 
 let objects = ObjectHelper.filterObjectsByKey(data, 'CURSOR', ['UP', 'LEFT']);
+```
 
-// searchTree
-
+### SearchTree
+```javascript
 var tree = [{
   title: 'topNode',
   children: [{
