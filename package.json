@@ -1,12 +1,13 @@
 {
-  "name": "object-helper-js",
-  "version": "1.0.7",
+  "name": "@caliatys/object-helper",
+  "version": "1.0.8",
   "description": "Manage your objects easily",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --reporter spec"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/Caliatys/ObjectHelper#readme",
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.1",
     "mocha": "^5.2.0",
     "nyc": "^11.8.0",
     "typescript": "^2.8.3"

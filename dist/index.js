@@ -13,13 +13,13 @@ var ObjectHelper = /** @class */ (function () {
     * let config = ObjectHelper.mergeObjects(defaultConfig, customConfig);
     */
     ObjectHelper.mergeObjects = function (targetObj, withObj) {
+        if (!targetObj || targetObj.length === 0)
+            throw new Error("First parameter must not be null or empty");
         for (var w in withObj) {
-            try {
-                targetObj[w] = withObj[w].constructor === Object ? this.mergeObjects(targetObj[w], withObj[w]) : withObj[w];
-            }
-            catch (e) {
+            if (withObj[w].constructor === Object)
+                targetObj[w] = this.mergeObjects(targetObj[w], withObj[w]);
+            else
                 targetObj[w] = withObj[w];
-            }
         }
         return targetObj;
     };
@@ -55,8 +55,7 @@ var ObjectHelper = /** @class */ (function () {
         }
         if (newObject.length)
             return newObject;
-        else
-            return null;
+        return null;
     };
     /** Find a node in a tree - Searches items tree for object with specified prop with value.
     *
@@ -70,26 +69,21 @@ var ObjectHelper = /** @class */ (function () {
     * let node = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
     */
     ObjectHelper.searchTree = function (tree, nodesProp, prop, value) {
+        // if (!tree || tree.length === 0)
+        //   throw new Error("First parameter must not be null or empty");
         var i, f = null; // Iterator, found node
-        if (Array.isArray(tree)) { // If entry object is array objects, check each object
+        if (Array.isArray(tree)) // If entry object is array objects, check each object
             for (i = 0; i < tree.length; i++) {
                 f = this.searchTree(tree[i], nodesProp, prop, value);
-                if (f) { // If found matching object, return it.
+                if (f) // If found matching object, return it.
                     return f;
-                }
             }
-        }
-        else if (typeof tree === 'object') { // Standard tree node (one root)
-            if (tree[prop] !== undefined && tree[prop] === value) {
+        else if (typeof tree === 'object') // Standard tree node (one root)
+            if (tree[prop] !== undefined && tree[prop] === value)
                 return tree; // Found matching node
-            }
-        }
-        if (tree[nodesProp] !== undefined && tree[nodesProp].length > 0) { // If this is not maching node, search nodes, children (if prop exist and it is not empty)
+        if (tree[nodesProp] !== undefined && tree[nodesProp].length > 0) // If this is not maching node, search nodes, children (if prop exist and it is not empty)
             return this.searchTree(tree[nodesProp], nodesProp, prop, value);
-        }
-        else {
-            return null; // Node does not match and it neither have children
-        }
+        return null; // Node does not match and it neither have children
     };
     return ObjectHelper;
 }());
