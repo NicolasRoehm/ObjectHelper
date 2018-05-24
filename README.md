@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Bakudan/ObjectHelper.svg?branch=master)](https://travis-ci.org/Bakudan/ObjectHelper)
+[![Build Status](https://travis-ci.org/Caliatys/ObjectHelper.svg?branch=master)](https://travis-ci.org/Caliatys/ObjectHelper)
 [![Coverage Status](https://coveralls.io/repos/github/Caliatys/ObjectHelper/badge.svg?branch=master)](https://coveralls.io/github/Caliatys/ObjectHelper?branch=master)
 
 # Object Helper
