@@ -1,26 +1,29 @@
+[![Build Status](https://travis-ci.org/Bakudan/ObjectHelper.svg?branch=master)](https://travis-ci.org/Bakudan/ObjectHelper)
+[![Coverage Status](https://coveralls.io/repos/github/Caliatys/ObjectHelper/badge.svg?branch=master)](https://coveralls.io/github/Caliatys/ObjectHelper?branch=master)
+
 # Object Helper
 > JavaScript helper for object management.
 
 <a href="https://runkit.com/bakudan/object-helper-js/" target="_blank">Demo with RunKit</a>
 
 ## Installation
-```bash
-$ npm install object-helper-js --save
+```sh
+npm install @caliatys/object-helper --save
 ```
 
-<a href="https://nodei.co/npm/object-helper-js/" target="_blank">
-  <img src="https://nodei.co/npm/object-helper-js.svg?downloads=true&downloadRank=true&stars=true">
+<a href="https://nodei.co/npm/@caliatys/object-helper/" target="_blank">
+  <img src="https://nodei.co/npm/@caliatys/object-helper.svg?downloads=true&downloadRank=true&stars=true">
 </a>
 
 ## Import
 ### JavaScript
 ```javascript
-let ObjectHelper = require('object-helper-js').ObjectHelper;
+let ObjectHelper = require('@caliatys/object-helper').ObjectHelper;
 ```
 
 ### TypeScript
 ```typescript
-import { ObjectHelper } from 'object-helper-js';
+import { ObjectHelper } from '@caliatys/object-helper';
 ```
 
 ## Usage
@@ -44,6 +47,12 @@ var customConfig = {
 };
 
 let config = ObjectHelper.mergeObjects(defaultConfig, customConfig);
+
+// {
+//   flipped: false,
+//   healthBar: { x: 0, y: 10 },
+//   isFixedToCamera: true
+// }
 ```
 
 ### FilterObjectsByKey
@@ -57,6 +66,11 @@ let data = {
 };
 
 let objects = ObjectHelper.filterObjectsByKey(data, 'CURSOR', ['UP', 'LEFT']);
+
+// [
+//   { id: "down",  key: "2" },
+//   { id: "right", key: "4" }
+// ]
 ```
 
 ### SearchTree
@@ -72,9 +86,9 @@ var tree = [{
       children: [{
         title: 'randomValue2',
         children: [{
-          title: 'node2',
+          title: 'node3',
           children: [{
-            title: 'randomValue3',
+            title: 'randomValue3'
           }]
         }]
       }]
@@ -82,7 +96,17 @@ var tree = [{
   }]
 }];
 
-let nodes = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue1');
+let nodes = ObjectHelper.searchTree(tree, 'children', 'title', 'randomValue2');
+
+// {
+//   title: "randomValue2",
+//   children: [{
+//     title: "node3",
+//     children: [{
+//        title: 'randomValue3'
+//      }]
+//   }]
+// }
 ```
 
 ## Test
